@@ -21,12 +21,14 @@ A backend system for small businesses to manage products and transactions. Built
 ## Setup and Installation
 
 1. Clone the repository
+   ```bash
+   git clone https://github.com/novneetsingh/Inventory-and-Billing-Management-System.git
+   ```
 2. Install dependencies:
+
    ```bash
    npm install
    ```
-
-````
 
 3. Create a `.env` file in the root directory with:
    ```env
@@ -38,18 +40,6 @@ A backend system for small businesses to manage products and transactions. Built
    ```bash
    npm start
    ```
-
-## Development
-
-To run in development mode with auto-reload:
-
-```bash
-
-npm install
-
-npm start
-```
-````
 
 ## Project Structure
 
@@ -199,35 +189,37 @@ src/
 
 - `GET /products` - List all products
 
-  ```json
-
-  Query Parameters: name , category
+```
+  Query Parameters: name, category
 
   /products?name=wash&category=cosmetics
 
-  Response:
+```
 
-  {
-    "success": true,
-    "message": "Products fetched successfully",
-    "count": 1,
-    "data": [
-        {
-          "_id": "68badb78cf25212ad47509f3",
-          "name": "Face Wash",
-          "description": "Aloe vera face wash 150ml",
-          "price": 150,
-          "stock": 60,
-          "category": "Cosmetics",
-          "businessId": "68babd6b154d9fd75f95123a",
-          "createdAt": "2025-09-05T12:45:44.015Z",
-          "updatedAt": "2025-09-05T13:06:34.919Z",
-          "__v": 0
-        }
-    ]
-  }
+```json
+Response:
 
-  ```
+{
+  "success": true,
+  "message": "Products fetched successfully",
+  "count": 1,
+  "data": [
+      {
+        "_id": "68badb78cf25212ad47509f3",
+        "name": "Face Wash",
+        "description": "Aloe vera face wash 150ml",
+        "price": 150,
+        "stock": 60,
+        "category": "Cosmetics",
+        "businessId": "68babd6b154d9fd75f95123a",
+        "createdAt": "2025-09-05T12:45:44.015Z",
+        "updatedAt": "2025-09-05T13:06:34.919Z",
+        "__v": 0
+      }
+  ]
+}
+
+```
 
 - `POST /products` - Add new product
 
@@ -299,12 +291,13 @@ src/
 
 - `GET /contacts` - List all contacts
 
-```json
-
-  Query Parameters: name , phone , email , address , type
+```
+  Query Parameters: name, phone, email, address, type
 
   /contacts?name=john
+```
 
+```json
   Response:
 
     {
@@ -432,11 +425,13 @@ src/
 
 - `GET /reports/transactions` - Generate reports about transactions
 
-```json
+```
   Query Parameters: startDate, endDate, type
 
   /reports/transactions?startDate=2025-09-01&type=sale
+```
 
+```json
   Response:
 
   {
