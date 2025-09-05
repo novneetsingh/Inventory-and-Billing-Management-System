@@ -2,6 +2,10 @@
 
 A backend system for small businesses to manage products and transactions. Built with Node.js, Express, and MongoDB.
 
+## Live Demo
+
+Render Deployed Link: https://inventory-and-billing-management-system.onrender.com
+
 ## Features
 
 - User Authentication (JWT)
